@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="352.0" prefWidth="322.0" style=" -fx-background-color: LightGrey" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ModifyPartsController">
+    <children>
+        <Label layoutX="14.0" layoutY="13.0" style="-fx-font-weight: bold, -fx-text-fill LightBlue" text="Modify Part">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="inhouseRadio" layoutX="122.0" layoutY="18.0" mnemonicParsing="false" onAction="#inhouseRadio" text="In-House" />
+        <RadioButton fx:id="outsourcedRadio" layoutX="216.0" layoutY="18.0" mnemonicParsing="false" onAction="#outsourcedRadio" text="Outsourced" />
+        <Label layoutX="55.0" layoutY="78.0" text="ID" />
+        <Label layoutX="45.0" layoutY="115.0" text="Name" />
+        <Label layoutX="53.0" layoutY="151.0" text="Inv" />
+        <Label layoutX="34.0" layoutY="184.0" text="Price/Cost" />
+        <Label layoutX="193.0" layoutY="222.0" text="Min" />
+        <Label layoutX="50.0" layoutY="222.0" text="Max" />
+        <Label fx:id="IHOPartLabel" layoutX="25" layoutY="260.0" />
+        <TextField fx:id="IDText" editable="false" layoutX="118.0" layoutY="74.0" promptText="ID" />
+        <TextField fx:id="nameText" layoutX="118.0" layoutY="111.0" promptText="Name" />
+        <TextField fx:id="inStockText" layoutX="118.0" layoutY="147.0" promptText="Inventory" />
+        <TextField fx:id="priceText" layoutX="118.0" layoutY="180.0" promptText="Price/Cost" />
+        <TextField fx:id="maxText" layoutX="115.0" layoutY="218.0" prefHeight="25.0" prefWidth="61.0" promptText="Max Inv" />
+        <TextField fx:id="minText" layoutX="237.0" layoutY="218.0" prefHeight="25.0" prefWidth="61.0" promptText="Min Inv" />
+        <TextField fx:id="IHOText" layoutX="115.0" layoutY="256.0"/>
+        <Button layoutX="189.0" layoutY="296.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="54.0" text="Save" />
+        <Button layoutX="255.0" layoutY="296.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="54.0" text="Cancel" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="456.0" prefWidth="1000.0" style=" -fx-background-color: LightGrey" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StartAppController">
+    <children>
+        <Label layoutX="20.0" layoutY="14.0" prefHeight="56.0" prefWidth="306.0" style="-fx-font-weight: bold, -fx-text-fill LightBlue" text="Inventory Management System">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Button layoutX="876.0" layoutY="403.0" onAction="#exit" prefHeight="30" prefWidth="70.0" text="Exit" />
+        <AnchorPane layoutY="50.0" prefHeight="300.0" prefWidth="500.0" style=" -fx-background-color: LightGrey">
+            <children>
+                <Label layoutX="30.0" layoutY="52.0" text="Parts"><font><Font size="20" /></font></Label>
+                <Button layoutX="197.0" layoutY="306.0" onAction="#addPart" prefHeight="30.0" prefWidth="70.0" text="Add" />
+                <Button layoutX="275.0" layoutY="306.0" onAction="#modifyPart" prefHeight="30.0" prefWidth="70.0" text="Modify" />
+                <Button layoutX="352.0" layoutY="306.0" onAction="#deletePart" prefHeight="30.0" prefWidth="70.0" text="Delete" />
+                <Button layoutX="232.0" layoutY="54.0" onAction="#searchPart" text="Search" />
+                <TextField fx:id="searchPartText" layoutX="284.0" layoutY="54.0" promptText="Search Parts" />
+                <TableView fx:id="partsTableView" layoutX="20.0" layoutY="91.0" prefHeight="208.0" prefWidth="460.0">
+                    <columns>
+                        <TableColumn fx:id="partIDColumn" prefWidth="96.0" text="Part ID" />
+                        <TableColumn fx:id="partNameColumn" prefWidth="116.0" text="Part Name" />
+                        <TableColumn fx:id="partInStockColumn" prefWidth="114.0" text="Inventory Level" />
+                        <TableColumn fx:id="partPriceColumn" prefWidth="134.0" text="Price/Cost per Unit" />
+                    </columns>
+                </TableView>
+                <Button layoutX="430.0" layoutY="54.0" onAction="#clearSearchPart" text="Clear" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="486.0" layoutY="50.0" prefHeight="300" prefWidth="500" style=" -fx-background-color: LightGrey">
+            <children>
+                <Label layoutX="28.0" layoutY="54.0" text="Products"><font><Font size="18.0" /></font></Label>
+                <Button layoutX="189.0" layoutY="304.0" onAction="#addProduct" prefHeight="30.0" prefWidth="70.0" text="Add" />
+                <Button layoutX="266.0" layoutY="304.0" onAction="#modifyProduct" prefHeight="30.0" prefWidth="70.0" text="Modify" />
+                <Button layoutX="343.0" layoutY="304.0" onAction="#deleteProduct" prefHeight="30.0" prefWidth="70.0" text="Delete" />
+                <Button layoutX="224.0" layoutY="55.0" onAction="#searchProduct" text="Search" />
+                <TextField fx:id="searchProductText" layoutX="276.0" layoutY="55.0" promptText="Search Products" />
+                <TableView fx:id="productsTableView" layoutX="29.0" layoutY="90.0" prefHeight="208.0" prefWidth="460.0">
+                    <columns>
+                        <TableColumn fx:id="productIDColumn" prefWidth="115.0" text="Product ID" />
+                        <TableColumn fx:id="productNameColumn" prefWidth="115.0" text="Product Name" />
+                        <TableColumn fx:id="productInStockColumn" prefWidth="115.0" text="Inventory Level" />
+                        <TableColumn fx:id="productPriceColumn" prefWidth="115.0" text="Price per Unit" />
+                    </columns>
+                </TableView>
+                <Button layoutX="425.0" layoutY="55.0" onAction="#clearSearchProduct" text="Clear" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
